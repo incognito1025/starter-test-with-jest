@@ -24,3 +24,28 @@ describe("getProductsPurchased()", () => {
         expect(actual).toEqual(expected);
     });
 });
+
+// function getProductsPurchased(contact) {
+//     const purchased = contact.purchased;
+  
+//     if (!purchased || !purchased.length) {
+//       return "No products purchased.";
+//     }
+  
+//     const result = [];
+//     for (let product of purchased) {
+//       result.push(product.name);
+//     }
+  
+//     return result;
+//   }
+
+
+//   describe("getProductsPurchased()", () => {
+//     it("should return a statement if no products have been purchased", () => {
+//       const input = {};
+//       const actual = getProductsPurchased(input);
+//       const expected = "No products purchased.";
+//       expect(actual).toEqual(expected);
+//     });
+//   });
