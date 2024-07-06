@@ -1,36 +1,3 @@
-// function to get the full name of a contact
-function getFullName(contact) {
-  const names = contact.names; //an obj representing a contact with a names property
-  return `${names.first} ${names.surname}`; // the full name of the contact in the format "first surname"
-}
-
-
-//function to get the names of products purchased by a contact
-function getProductsPurchased(contact) { //an object representing a contact with a purchased property
-  const purchased = contact.purchased; // a string indicating no products purchased, a  string with the name of a single product purchased, or an array of product names.
-
-  if (!purchased.length) {
-    return "No products purchased.";
-  }
-
-  if (purchased.length === 1) {
-    return purchased[0].name;
-  }
-
-  const result = [];
-  for (let product of purchased) {
-    result.push(product.name);
-  }
-
-  return result;
-}
-
-module.exports = {
-  getFullName,
-  getProductsPurchased,
-};
-
-
 /*
 
 Test with Jest
@@ -339,7 +306,7 @@ describe("getFullName()", () => {
 24. Before moving on to test the next function, run Jest's coverage tool. To do so, run the following command. What does the output of this command tell you about the src/products.js file?
 *The output will show coverage metrics for `src/products.js`*
 
-Coverage Directory is created - it contains coverage reports, incluidng an `index.html` file with detailed coverate info.
+Coverage Directory is created - it contains coverage reports, incluidng an `index.html` file with detailed overate info.
 
 npm test -- --coverage
 
